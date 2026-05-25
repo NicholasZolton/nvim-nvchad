@@ -1,14 +1,5 @@
 return {
   {
-    "dmtrKovalenko/fff.nvim",
-    cond = not vim.g.vscode,
-    build = function()
-      require("fff.download").download_or_build_binary()
-    end,
-    lazy = false,
-    opts = {},
-  },
-  {
     "nvim-lua/plenary.nvim",
     lazy = false,
     enabled = true,
@@ -186,7 +177,7 @@ return {
       require("project_nvim").setup {
         show_hidden = false,
         detection_methods = { "pattern" },
-        patterns = { "!^.git", "!^.hg", ".git", ".hg", "Makefile" },
+        patterns = { "!^.git", "!^.hg", "!^.jj", ".jj", ".git", ".hg", "Makefile" },
       }
     end,
   },

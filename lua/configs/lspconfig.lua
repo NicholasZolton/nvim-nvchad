@@ -11,13 +11,21 @@ local servers = {
   rnix = {},
   basedpyright = {},
   tflint = {},
-  tailwindcss = {},
+  -- tailwindcss = {},
   gdscript = {},
   rust_analyzer = {},
   kotlin_lsp = {
     cmd = { vim.fn.stdpath "data" .. "/mason/bin/intellij-server", "--stdio" },
     filetypes = { "kotlin" },
-    root_markers = { "build.gradle", "build.gradle.kts", "pom.xml", "mvnw", ".git" },
+    root_markers = {
+      "settings.gradle.kts",
+      "settings.gradle",
+      "build.gradle.kts",
+      "build.gradle",
+      "pom.xml",
+      "mvnw",
+      ".git",
+    },
   },
   harper_ls = {
     filetypes = { "markdown", "txt" },
